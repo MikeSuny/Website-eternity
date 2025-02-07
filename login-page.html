@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="https://i.pinimg.com/736x/db/16/45/db1645cc1ed95625a5dff41ee9a0f164.jpg" alt="Logo" class="logo">
+            <h2 class="title">login page</h2>
+            <form id="login-form">
+                <label for="email">📧 email address</label>
+                <input type="text" id="email" placeholder="Phone number / email address" required>
+                
+                <label for="password">🔒 Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Accept If U Done Login <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+                
+                <button type="submit" class="login-button">Log in</button>
+            </form>
+            <div class="footer-links">
+                <a href="#">Forgot password?</a>
+                <a href="#">Sign up</a>
+            </div>
+            <p class="footer">Web By Fery • Find Bug Report To <a href="https://wa.me/6283846273773">WhatsApp</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var termsChecked = document.getElementById("terms").checked;
+            
+            if (!email || !password) {
+                alert("Please enter your email and password.");
+                return;
+            }
+            
+            if (!termsChecked) {
+                alert("You must accept the Terms of Use and Privacy Policy.");
+                return;
+            }
+            
+            alert("Login successful!");
+            // Simulate a redirect after successful login (Replace with actual login logic)
+            window.location.href = "dashboard1.html";
+        });
+    </script>
+</body>
+</html>

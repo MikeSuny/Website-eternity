@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Home Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script1.js"></script>
+  <script src="script1.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-black text-white">
+  <header class="flex items-center justify-between p-4 bg-black">
+    <img alt="Logo" class="h-12" src="https://i.pinimg.com/736x/3d/a0/98/3da0989f9542da3ad1245e075278098b.jpg"/>
+    <div class="flex items-center space-x-4">
+      <input class="p-2 rounded bg-gray-800 text-white" placeholder="Search Item" type="text"/>
+      <nav class="flex items-center space-x-4">
+        <div class="relative group">
+          <button class="focus:outline-none">
+            MENU <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="absolute hidden group-hover:block bg-gray-800 text-white mt-2 rounded shadow-lg">
+            <a class="block px-4 py-2" href="#">Option 1</a>
+            <a class="block px-4 py-2" href="#">Option 2</a>
+          </div>
+        </div>
+        <div class="relative group">
+          <button class="focus:outline-none">
+            INFORMATION <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="absolute hidden group-hover:block bg-gray-800 text-white mt-2 rounded shadow-lg">
+            <a class="block px-4 py-2" href="#">Option 1</a>
+            <a class="block px-4 py-2" href="#">Option 2</a>
+          </div>
+        </div>
+        <a class="focus:outline-none" href="#">CALCULATOR</a>
+      </nav>
+      <button id="loginBtn" class="bg-blue-500 text-white px-4 py-2 rounded-full">
+        LOGIN
+    </button>
+    
+    </div>
+  </header>
+  <main class="p-4">
+    <div class="flex justify-center space-x-4">
+<div class="bg-gray-800 p-4 rounded-lg text-center">
+    <img alt="Uncommon Item" class="mx-auto mb-2" src="https://i.pinimg.com/736x/c7/a5/92/c7a5921734f1773070439a6be60c6958.jpg"/>
+    <button id="placesid" class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-full">
+        Moderator
+    </button>
+</div>
+<script>
+  const loginBtn = document.getElementById("placesid");
+  if (loginBtn) {
+      loginBtn.addEventListener("click", function() {
+          window.location.href = "place1.html";
+      });
+  }
+</script>
+      <space>
+      </space>
+      <div class="bg-gray-800 p-4 rounded-lg text-center">
+        <img alt="Rare Item" class="mx-auto mb-2" src="https://i.pinimg.com/736x/27/72/71/277271dfd50e76d3ba3f8cf25e95e814.jpg"/>
+        <button id="placedev" class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-full">
+          Admin
+      </button>
+  </div>
+  <script>
+    const loginBtn2 = document.getElementById("placedev");
+    if (loginBtn2) {
+        loginBtn2.addEventListener("click", function() {
+            window.location.href = "place2.html";
+        });
+    }
+  </script>
+      <space>
+      </space>
+      <div class="bg-gray-800 p-4 rounded-lg text-center">
+        <img alt="Legendary Item" class="mx-auto mb-2" src="https://i.pinimg.com/736x/5e/d6/a0/5ed6a0a05c5b57d4e6ac3a5eff82469e.jpg"/>
+        <p class="font-bold">Developer</p>
+      </div>
+      <space>
+      </space>
+      <div class="bg-gray-800 p-4 rounded-lg text-center">
+        <img alt="Mythical Item" class="mx-auto mb-2" src="https://i.pinimg.com/736x/e4/1b/6d/e41b6d181bfcf835f06f76542b44bd91.jpg"/>
+        <p class="font-bold">Juragan</p>
+      </div>
+    </div>
+  </main>
+  <footer class="p-4 bg-black text-center">
+    <h2 class="text-xl font-bold">Top 3 Donaturs <i class="fas fa-trophy"></i></h2>
+    <a class="text-blue-500" href="#">View More &gt;</a>
+  </footer>
+</body>
+</html>
